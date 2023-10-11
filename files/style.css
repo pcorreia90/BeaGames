@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Caveat Brush', cursive;
+    
+}
+
+
+.main-container {
+    background-image: url('resources/bluey-background-backyard.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.main-container > * {
+    display: flex;
+    justify-content: center;
+    font-family: 'Caveat Brush', cursive;
+    color: blue
+}
+.description {
+    font-size: 4rem;
+}
+
+.numbers-container > * {
+    margin: 1rem;
+    font-size: 6rem;
+    width: 10rem;
+    text-align: center;
+}
+
+.numbers-container input {
+    font-family: 'Caveat Brush', cursive;
+    border: none;
+    border-bottom: 5px solid blue;
+    background-color: rgba(0, 255, 255, 0.30);
+    color: blue
+}
+
+.btn-container > * {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.btn-container button {
+    background-color: blue;
+    border: none;
+    border-radius: 1rem;
+    font-family: 'Caveat Brush', cursive;
+    color: white;
+    font-size: 3rem;
+    min-width: 20rem
+}
+
+.resultMsg-container {
+    height: 4rem;
+    font-size: 3rem;
+}
+
+

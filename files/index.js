@@ -8,12 +8,17 @@ const happyFace = "\uD83D\uDE04";
 const sadFace = "\uD83D\uDE22";
 
 randomNumElement.innerHTML = 0;
-confirmNumBtn.disabled = true;
+
+document.addEventListener('DOMContentLoaded', function() {
+    generateRandomNumber(200)
+    previousNumInput.value = null
+    nextNumInput.value = null
+})
 
 getNewNumBtn.addEventListener('click', function (){
-    generateRandomNumber(100);
-    previousNumInput.value = ""
-    nextNumInput.value = ""
+    generateRandomNumber(200);
+    previousNumInput.value = null
+    nextNumInput.value = null
     resultMessage.innerHTML = ""
     getNewNumBtn.disabled = true
     confirmNumBtn.disabled = false
@@ -21,13 +26,12 @@ getNewNumBtn.addEventListener('click', function (){
 
 confirmNumBtn.addEventListener('click', function (){
     let currentNum = parseInt(randomNumElement.innerHTML)
-    console.log(currentNum)
     let previousNum = parseInt(previousNumInput.value)
-    console.log(previousNum)
     let nextNum = parseInt(nextNumInput.value)
-    console.log(nextNum)
 
-    if(previousNum == null || nextNum == null){
+    console.log(previousNum + " " + currentNum + " " + nextNum)
+
+    if(previousNum == null || nextNum == null || isNaN(previousNum) || isNaN(nextNum)){
         resultMessage.innerHTML ="Tens de preencher os dois números.";
         return;
     }
